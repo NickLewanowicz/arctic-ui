@@ -1,0 +1,16 @@
+<div class="title">
+  <h3>Repository: {{model.name}}</h3>
+  <h5>Author: {{model.user}}</h5>
+  <h5>Version: {{model.version}}</h5>
+  <h5>Description: {{model.description}}</h5>
+  <h5>Dependencies:<br />
+    {{#each model.dependencies as |item|}}
+       - {{#link-to }} {{item}} {{/link-to}} <br />
+    {{/each}}
+  </h5>
+  <h5>Developer Dependencies:<br />
+    {{#each model.devDependencies as |item|}}
+       - {{item}}<br />
+    {{/each}}
+  </h5>
+</div>

@@ -1,0 +1,1 @@
+/Users/nlewanow/Documents/artic-demo/tmp/funnel-input_base_path-c8h7gGbr.tmp/0/fake_xml_http_request.js

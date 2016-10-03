@@ -1,0 +1,1 @@
+/Users/nlewanow/Documents/artic-demo/tmp/creator-output_path-0JSMEU1r.tmp/version.js

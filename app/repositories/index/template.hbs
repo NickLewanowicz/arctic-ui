@@ -1,0 +1,9 @@
+<form {{action "addProject" on='submit' }}>
+  <div class="center">
+    {{input type="text" class="texbox" placeholder="Input Project url here!" value=projectUrl}}
+    <button type= "submit">Add</button>
+  </div>
+  <div class="repoList">
+    {{repo-list repos = model}}
+  </div>
+</form>

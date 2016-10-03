@@ -1,0 +1,1 @@
+{"modulePrefix":"artic-demo","environment":"development","rootURL":"/","locationType":"auto","apiHost":"http://localhost:4500/api","contentSecurityPolicy":{"connect-src":"self' http://localhost:4500"},"EmberENV":{"FEATURES":{}},"APP":{"LOG_ACTIVE_GENERATION":true,"LOG_VIEW_LOOKUPS":true,"name":"artic-demo","version":"0.0.0+7c2d4f2b"},"exportApplicationGlobal":true}

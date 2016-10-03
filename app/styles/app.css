@@ -1,0 +1,49 @@
+a:link {
+    color: grey;
+}
+
+/* visited link */
+a:visited {
+    color: darkgrey;
+}
+
+/* mouse over link */
+a:hover {
+    color: silver;
+}
+
+/* selected link */
+a:active {
+    color: black;
+}
+
+body {
+  font-family: Arial;
+}
+
+
+.banner {
+  color: grey;
+}
+
+.banner-logo {
+  font-size: 4.0em;
+  font-style: normal;
+}
+
+.banner-other {
+  font-size: 1.5em;
+}
+
+.right {
+  float: right;
+}
+
+.center {
+
+  text-align: center;
+}
+
+.textbox {
+  min-height: 100px;
+}

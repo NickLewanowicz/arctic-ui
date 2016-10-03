@@ -1,0 +1,22 @@
+<ul>
+  {{#each repos as |repo|}}
+    <div class="repoInfo">
+      <li>
+        <div class="title">
+          <h3>Repository: {{repo.id}}</h3>
+          <h5>Author: {{repo.user}}</h5>
+          <h5>Version: {{repo.version}}</h5>
+          <h5>Description: {{repo.description}}</h5>
+          <h5>Dependencies:<br />
+            {{log repo.dependency}}
+            {{#each item in repo.dependency}}
+               - {{#link-to }} {{item}} {{/link-to}} <br />
+            {{/each}}
+          </h5>
+          <h5>Developer Dependencies:<br />
+          </h5>
+        </div>
+      </li>
+    </div>
+  {{/each}}
+</ul>
