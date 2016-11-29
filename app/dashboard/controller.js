@@ -55,8 +55,6 @@ export default Controller.extend({
   filteredModel: computed('model', 'repoFilter', 'ember-frost-ecosystem','ember-cli-ember-ecosystem', 'radioSelection', 'complianceRange',function () {
     const model = get(this, 'model.repositories')
     var filter = get(this, 'repoFilter'),
-        emberCompliant = get(this, 'ember-cli-ember-ecosystem'),
-        frostCompliant = get(this, 'ember-frost-ecosystem'),
         ecosystem = get(this, 'radioSelection'),
         range = get(this,'complianceRange'),
         wlFilter = ['ciena-frost', 'BP_FROST', 'BP_UI_APPS', 'ciena-blueplanet']

@@ -25,4 +25,4 @@ export default function(){
     this.use('crossFade', {duration:500}),
     this.reverse('crossFade', {duration:300})
   );
-};
+}

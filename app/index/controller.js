@@ -23,9 +23,7 @@ export default Controller.extend({
         orgFilter = [],
         otherFilter = ['ciena-frost', 'BP_FROST', 'BP_UI_APPS', 'ciena-blueplanet']
 
-    if(!filter){
-
-    }else{
+    if(filter){
       filter.toLowerCase()
     }
     cienaFrostChecked ? orgFilter.addObject('ciena-frost') : orgFilter.removeObject('ciena-frost')
@@ -68,7 +66,6 @@ export default Controller.extend({
   }),
   actions: {
     smallSearch(){
-      var self = this
       this.set('appController.bigSearch', false)
     },
   }

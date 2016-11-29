@@ -2,7 +2,6 @@ import Ember from 'ember';
 import RSVP from 'rsvp';
 
 const {
-  Route,
   get
 } = Ember
 

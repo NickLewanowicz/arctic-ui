@@ -3,7 +3,6 @@ export default function() {
   this.namespace = 'api';    // make this `api`, for example, if your API is namespaced
   this.timing = 150;
   this.get('/repositories', function (server, request) {
-    console.log(server.db.dependencies)
     return {
       data: server.db.repositories.map(function (repo) {
         return {

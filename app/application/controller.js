@@ -2,7 +2,6 @@ import Ember from 'ember';
 import RSVP from 'rsvp';
 
 const {
-  Controller,
   computed,
   get
 } = Ember
@@ -51,19 +50,16 @@ export default Ember.Controller.extend({
       this.set('searchTerm', temp)
     },
     smallSearch(){
-      var self = this
       this.set('bigSearch', false)
       this.set('searchTerm', get(this, 'repoFilter'))
     },
     biggerSearch(){
-      var self = this
       this.set('bigSearch', true)
       this.set('repoFilter', '')
       this.set('searchTerm', '')
     },
     toggleSearch(){
-      var self = this
-      self.toggleProperty('bigSearch')
+      this.toggleProperty('bigSearch')
     },
     addRepoDialog(){
       this.toggleProperty('addRepo')

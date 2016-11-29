@@ -5,7 +5,7 @@ export default Ember.Component.extend({
     this.sendAction();
   },
   actions: {
-    imagePath(repo) {
+    imagePath() {
       return 'assets/images/github.svg'
     }
   }
