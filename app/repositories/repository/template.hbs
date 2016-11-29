@@ -23,7 +23,7 @@
     </div>
   {{else if (eq basicTabsSelection "usedby")}}
     {{#if newModel.isdependency.isdependencies}}
-      {{md-input value=depFilter icon="search tiny right" label='Search repositories by name or organization'}}
+      {{md-input value=depFilter icon="search right" label='Search repositories by name or organization'}}
       <div class="col l10 offset-l1">
         {{#each isDepFilteredModel as |dep|}}
           <div class='col s12 m6 l4'>
