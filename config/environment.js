@@ -8,7 +8,7 @@ module.exports = function(environment) {
     locationType: 'auto',
     apiHost: 'http://localhost:4500/api',
     contentSecurityPolicy: {
-      'connect-src': "self' http://localhost:4500"
+      'connect-src': "self' http://localhost:4500/api"
     },
     EmberENV: {
       FEATURES: {
@@ -22,6 +22,13 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+
+  if(environment === 'production') {
+    apiHost: 'http://frost.ciena.com:8082/api',
+    contentSecurityPolicy: {
+      'connect-src': "self' http://frost.ciena.com:8082"
+    }
+  }
 
   if (environment === 'development') {
     ENV.APP.LOG_ACTIVE_GENERATION = true;
