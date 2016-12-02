@@ -24,10 +24,7 @@ module.exports = function(environment) {
   };
 
   if(environment === 'production') {
-    apiHost: 'http://frost.ciena.com:8082/api',
-    contentSecurityPolicy: {
-      'connect-src': "self' http://frost.ciena.com:8082"
-    }
+    apiHost: 'http://frost.ciena.com:8082/api'
   }
 
   if (environment === 'development') {
