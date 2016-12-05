@@ -16,6 +16,7 @@ export default Ember.Route.extend({
     newSearch(){
       if(this.controllerFor('application').get('repoFilter') === ''){
         this.controllerFor('application').set('bigSearch', true)
+        this.transitionTo('index')
         this.controllerFor('application').set('searchTerm', this.controllerFor('application').get('repoFilter'))
       }else{
         this.transitionTo('index')
