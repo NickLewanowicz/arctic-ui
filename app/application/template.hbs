@@ -36,7 +36,7 @@
       <div class="nav-wrapper">
         <div class='brand-logo'>{{#link-to 'index' }}<img src="/assets/images/Artic_logo.svg" />{{/link-to}}</div>
         <div class = "brand-logo center search-bar-small black-text">
-          {{input type="text" placeholder='Search for Components' enter="smallSearch" value=repoFilter label=''}}
+          {{input type="text" value=repoFilter placeholder='Search for Components' enter="newSearch" label='Search for Components' }}
         </div>
         <ul id="nav-mobile" class="right hide-on-small-and-down">
           <li><a class="waves-effect" {{action 'addRepoDialog'}}>Add Repository</a></li>
