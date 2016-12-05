@@ -24,7 +24,6 @@ export default Ember.Route.extend({
     },
     willTransition: function(transition) {
       if(transition.targetName === 'index'){
-        console.log(this.controllerFor('application').get('searchTerm'));
         if(this.controllerFor('application').get('searchTerm') === ''){
           this.controllerFor('application').set('bigSearch', true)
         }

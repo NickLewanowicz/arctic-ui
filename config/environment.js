@@ -24,7 +24,7 @@ module.exports = function(environment) {
   };
 
   if(environment === 'production') {
-    apiHost: 'http://frost.ciena.com:8082/api'
+    apiHost: 'http://frost.ciena.com:4500/api'
   }
 
   if (environment === 'development') {
