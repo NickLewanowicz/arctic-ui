@@ -96,7 +96,8 @@ html, body.ember-application, body {
   }
   .search-bar{
     padding: 0;
-    height: 47px;
+    padding-left: 5px;
+    height: 45px;
     min-width: 300px;
     position: relative;
     top: 0px;
@@ -105,11 +106,13 @@ html, body.ember-application, body {
     border-color: rgba(0,0,0,.15);
     background-color: white;
   }
-  .search-bar-small{
-    padding: 0;
-    height: 47px;
+  .search-bar-small input{
+    border: 1px solid black;
+    border-color: black;
+    background-color: white;
+    padding-left: 10px;
+    height: 30px;
     min-width: 300px;
-
   }
   .modal{
     max-height: 15VH;
