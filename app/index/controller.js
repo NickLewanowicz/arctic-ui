@@ -23,6 +23,7 @@ export default Controller.extend({
         orgFilter = [],
         otherFilter = ['ciena-frost', 'BP_FROST', 'BP_UI_APPS', 'ciena-blueplanet']
 
+    this.set('page',1)
     if(filter){
       filter.toLowerCase()
     }
