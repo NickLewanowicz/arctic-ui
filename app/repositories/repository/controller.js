@@ -13,7 +13,6 @@ export default Controller.extend({
   isDepFilteredModel: computed('model', 'depFilter',function () {
     const model = get(this, 'model.isdependency.isdependencies')
     var theFilter = get(this, 'depFilter')
-
     if(!theFilter){
      theFilter = ''
     }else{

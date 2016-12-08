@@ -1,7 +1,14 @@
 {{#liquid-bind model class="toLeft-demo" as |newModel|}}
 <div class = "content row overflow">
-  <h4><i><a href='{{newModel.repository.link}}' target='_blank'>&nbsp;{{newModel.repository.id}}</a></i></h4>
-  &nbsp;Latest Version: {{newModel.repository.versions.lastObject.version}}<br />
+  <h4>
+    <i><a href='{{newModel.repository.link}}' target='_blank'>&nbsp;{{newModel.repository.id}}</a></i>
+    <img src={{repoIcon newModel.repository.organization}}  height=45px />
+  </h4>
+  &nbsp;Latest Version: {{newModel.repository.versions.lastObject.version}}
+  <a href='{{repo.link}}' target='_blank'>
+    <img class="source-icon" src={{imagePath newModel.repository.link}} height=15px />
+  </a>
+  <br />
   &nbsp;Description: {{newModel.repository.description}}
   {{md-tabs content=basicTabsContent selected=basicTabsSelection}}
   {{#if (eq basicTabsSelection "dependencies")}}

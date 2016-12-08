@@ -16,14 +16,19 @@ export default Ember.Route.extend({
     newSearch(){
       if(this.controllerFor('application').get('repoFilter') === ''){
         this.controllerFor('application').set('bigSearch', true)
-        this.transitionTo('index')
+        if(this.controllerFor('application').get('currentRouteName') !== 'dashboard'){
+            this.transitionTo('index')
+        }
         this.controllerFor('application').set('searchTerm', this.controllerFor('application').get('repoFilter'))
       }else{
-        this.transitionTo('index')
+        if(this.controllerFor('application').get('currentRouteName') !== 'dashboard'){
+            this.transitionTo('index')
+        }
         this.controllerFor('application').set('searchTerm', this.controllerFor('application').get('repoFilter'))
       }
     },
     willTransition: function(transition) {
+      console.log(this.controllerFor('application').get('currentRouteName'));
       if(transition.targetName === 'index'){
         if(this.controllerFor('application').get('searchTerm') === ''){
           this.controllerFor('application').set('bigSearch', true)

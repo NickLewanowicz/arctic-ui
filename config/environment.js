@@ -7,6 +7,7 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
     apiHost: 'http://localhost:4500/api',
+    //apiHost: 'http://frost.ciena.com:4500/api',
     contentSecurityPolicy: {
       'connect-src': "self' http://localhost:4500/api"
     },

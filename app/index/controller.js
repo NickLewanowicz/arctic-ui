@@ -41,7 +41,14 @@ export default Controller.extend({
       return Object.keys(repo).some(key => {
         if (typeof repo[key] !== 'string'){
           return false
-        }else if(((otherChecked && !(otherFilter.indexOf(repo.data.organization) > -1)) || (!otherChecked && (orgFilter.length === 0 || !(orgFilter.indexOf(repo.data.organization) === -1)))) && repo[key].indexOf(filter) > -1){
+        //Nothing is checked and matched search
+        }else if(orgFilter.length === 0 && !otherChecked && repo[key].indexOf(filter) > -1){
+          return true
+        //only orgs are checked and matched search
+        }else if(!otherChecked && !(orgFilter.indexOf(repo.data.organization) === -1) && repo[key].indexOf(filter) > -1){
+          return true
+        //other org or whitelist orgs and matched search
+        }else if((!(orgFilter.indexOf(repo.data.organization) === -1) || (otherFilter.indexOf(repo.data.organization) === -1)) && repo[key].indexOf(filter) > -1){
           return true
         }else{
           return false

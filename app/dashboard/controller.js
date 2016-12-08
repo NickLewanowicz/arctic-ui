@@ -60,7 +60,7 @@ export default Controller.extend({
         wlFilter = ['ciena-frost', 'BP_FROST', 'BP_UI_APPS', 'ciena-blueplanet']
 
     this.get('appController').toggleSearch
-
+    this.set('page', 1)
     if(!filter){
       filter = ''
     }else{

@@ -10,17 +10,15 @@
       <div class="card-content left-align black-text">
         {{#link-to 'repositories.repository' repo.id}}
           <div class = "linked black-text">
-            <span class="card-title-main black-text truncate">{{repo.id}}</span><br />
+            <span class="card-title-main black-text truncate">{{repo.id}}</span>
             {{#if ltsVersion.compliantpercent.ember-frost-ecosystem}}
               <p><span class="pill blue">FROST &#10003;{{percentage ltsVersion.compliantpercent.ember-frost-ecosystem.[0] (sum ltsVersion.compliantpercent.ember-frost-ecosystem.[0] ltsVersion.compliantpercent.ember-frost-ecosystem.[1])}}%</span></p>
             {{/if}}
             {{#if ltsVersion.compliantpercent.ember-cli-ember-ecosystem}}
               <p><span class="pill red">EMBER &#10003;{{percentage ltsVersion.compliantpercent.ember-cli-ember-ecosystem.[0] (sum ltsVersion.compliantpercent.ember-cli-ember-ecosystem.[0] ltsVersion.compliantpercent.ember-cli-ember-ecosystem.[1])}}%</span></p>
             {{/if}}
-
           </div>
         {{/link-to}}
-
         <a href='{{repo.link}}' target='_blank'>
             <img class="source-icon" src={{imagePath repo.link}} height=15px opacity=0.7 />
         </a>
